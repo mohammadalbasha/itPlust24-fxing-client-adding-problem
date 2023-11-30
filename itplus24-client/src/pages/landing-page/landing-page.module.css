@@ -1,0 +1,87 @@
+.landingPage {
+  transition: transform 0.3s ease;
+  background-image: url("https://it-plus24.com/img/shape/14.png"); 
+  background-color: rgb(27, 25, 25);
+  box-sizing: border-box;
+  position: relative;
+  }
+  
+  .main {
+      height: 100vh;
+
+   }
+  
+  h1 {
+    margin: 0px;
+    overflow: inherit;
+  }
+
+  .mainPage {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    color: rgb(230, 208, 208);
+
+  }
+
+  .greeting__second {
+    margin-left: 4rem;
+    z-index: 10;
+  }
+  .greeting__first{
+    z-index: 10;
+  }
+
+  .greeting::after{
+    position: absolute;
+    top:50%;
+    content: "";
+    height: 300px;
+    width: 300px;
+    background: var(--bg-gradient);
+  opacity: .6;
+
+    background: linear-gradient(90deg,rgb(85, 133, 192) 0%,rgb(19, 48, 84) 100%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+  
+  @media (min-width :748px){
+    .greeting::after{
+      left: 15%;
+      height: 500px;
+      width: 500px;
+    }
+    .greeting {
+      font-size: 3rem;
+    }
+  }
+
+  .navItem__link:hover{
+    opacity: 0.6;
+  }
+  
+  .navItem__link {
+    background: linear-gradient(90deg,rgb(85, 133, 192) 0%,rgb(19, 48, 84) 100%);
+    border-radius: 5px;
+    margin-left: 10rem;
+
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 1rem 1rem;
+
+
+  }
+  .navItem__link__arrow{
+    color: white;
+    vertical-align: middle;
+    margin-left: 0.3rem;
+  }

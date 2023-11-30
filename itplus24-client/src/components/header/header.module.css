@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #5a5a5d;
+  /* background-color: #f5f5f5; */
+  /* position: fixed; */
+  top: 0;
+  ;
+  width: 100%;
+  padding: 2.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+
+}
+
+
+.logoContainer {
+  width: 10rem;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 10;
+  cursor: pointer;
+}
+.logo {
+  width: 200px;
+}

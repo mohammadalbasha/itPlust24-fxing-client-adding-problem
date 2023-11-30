@@ -1,0 +1,51 @@
+version: "3"
+
+services:
+  back-end:
+    build:
+      context: itplus24-server
+    container_name: back-end
+    working_dir: /usr/src/app
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - ARCGIS_API_KEY=AAPKa0ea8a8731924de297d1d155c94c974bP7OXRIPAF2_SF-Fe1inoXdgkU7X_VNjzRt8s4SQ5i_Os8_yayClkMekAXF94P05z
+      - MONGO_URL=mongodb://mongo:27017/geolocation
+      - REDIS_URL=redis://redis:6379
+      - MAIL_HOST=smtp.gmail.com
+      - MAIL_PORT=465
+      - MAIL_DEFAULT_FROM_USER=itplus24
+      - MAIL_IS_SECURE=false
+      - MAIL_AUTH_USER=mohammadalbacha2000@gmail.com
+      - MAIL_AUTH_PASSWORD=klshuwxibiqgdxko
+      - MAIL_SMTP=smtp.gmail.com
+      - FRONTEND_DOMAIN="http://front-end:3000"
+      - ENVIRONMENT=docker
+
+    depends_on:
+      - mongo
+      - redis
+
+  front-end:
+    build:
+      context: itplus24-client
+    container_name: front-end
+    environment:
+      - BACKEND_DOMAIN=http://localhost:8080
+    ports:
+      - "3000:3000"
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"

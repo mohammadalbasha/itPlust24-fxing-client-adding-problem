@@ -1,0 +1,69 @@
+.geolocationPage{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    min-height: 100vh;
+}
+
+
+.search {
+    padding: 1rem;
+    width: 60%;
+              
+  }
+  
+  
+  .search__heading {
+    color: white;
+    background: #66c;
+    padding: 15px 5px;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .add__fieldsItems {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  @media (min-width: 748px) {
+    .add__fieldsItems {
+      flex-direction: row;
+    }
+  }
+  
+  .search__submitButton {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 0.1px solid rgb(199, 199, 202);
+  }
+  
+  .search__submitButton__button {
+    margin-right: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #66c;
+    cursor: pointer;
+
+    color: white;
+  }
+  .search__submitButton__button:hover {
+    opacity: 0.8;
+  }
+  
+.geolocationContainer{
+    width: 70%;
+    margin: 2rem;
+    border: 1px solid #530071;
+}
+.geolocationDetails {
+    text-align: center;
+    margin-top: 1rem;
+    color: rgb(32, 32, 81);
+}
